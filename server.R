@@ -1,6 +1,5 @@
 library(shiny)
 
-# Define server logic required to draw a histogram
 shinyServer(function(input, output) {
   model1 <- lm(weight~factor(Diet)+factor(Time),data=ChickWeight)
   model1pred <- reactive({
